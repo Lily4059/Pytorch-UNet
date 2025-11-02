@@ -172,9 +172,9 @@ def get_args():
     parser.add_argument('--epochs', '-e', metavar='E', type=int, default=1, help='Number of epochs')    #修改了训练轮次
     parser.add_argument('--batch-size', '-b', dest='batch_size', metavar='B', type=int, default=1, help='Batch size')
     parser.add_argument('--learning-rate', '-l', metavar='LR', type=float, default=1e-6,
-                        help='Learning rate', dest='lr')            #修改了学习率
+                        help='Learning rate', dest='lr')            #修改了学习率（原始是1e-5）
     parser.add_argument('--load', '-f', type=str, default=False, help='Load model from a .pth file')
-    parser.add_argument('--scale', '-s', type=float, default=0.5, help='Downscaling factor of the images')
+    parser.add_argument('--scale', '-s', type=float, default=0.25, help='Downscaling factor of the images')     #修改了图像缩放比例（原始是0.5）
     parser.add_argument('--validation', '-v', dest='val', type=float, default=10.0,
                         help='Percent of the data that is used as validation (0-100)')
     parser.add_argument('--amp', action='store_true', default=False, help='Use mixed precision')
