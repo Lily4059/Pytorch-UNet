@@ -174,8 +174,8 @@ def get_args():
     parser.add_argument('--learning-rate', '-l', metavar='LR', type=float, default=1e-6,
                         help='Learning rate', dest='lr')            #修改了学习率（原始是1e-5）
     parser.add_argument('--load', '-f', type=str, default=False, help='Load model from a .pth file')
-    parser.add_argument('--scale', '-s', type=float, default=0.25, help='Downscaling factor of the images')     #修改了图像缩放比例（原始是0.5）
-    parser.add_argument('--validation', '-v', dest='val', type=float, default=10.0,
+    parser.add_argument('--scale', '-s', type=float, default=0.5, help='Downscaling factor of the images')     #修改了图像缩放比例（原始是0.5）
+    parser.add_argument('--validation', '-v', dest='val', type=float, default=5.0,     #修改了验证集比例（原始是10.0）
                         help='Percent of the data that is used as validation (0-100)')
     parser.add_argument('--amp', action='store_true', default=False, help='Use mixed precision')
     parser.add_argument('--bilinear', action='store_true', default=False, help='Use bilinear upsampling')
